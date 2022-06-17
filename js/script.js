@@ -218,26 +218,28 @@ function allBlogPostUI(arr) {
 
     arr.forEach(post => {
         getPostHolder +=   `<div class="col-lg-4 col-md-6 mb-5" data-aos="zoom-in-up">
-                                <div class="all-blogs-image" style="margin-bottom: 2em;"></div>
-                                <div class="all-blogs-info">
-                                    <p class="text-secondary fs-6">LIFESTYLE &nbsp;&nbsp;|&nbsp;&nbsp; JUNE 12, 2022</p>
-                                </div>
-                                <p class="text-secondary" class="post-id"></p>
-                                <div class="all-blogs-title pb-2">
-                                    <p class="display-6 post-title" id="all-blogs-post-title">${post.title}</p>
-                                </div>
-                                <div class="all-blogs-body">
-                                    <p class="text-secondary mb-5 post-message" id="all-blogs-post-body" style="font-size: 18px;">${post.body}</p>
-                                </div>
-                                <div class="all-blogs-post-buttons d-flex justify-content-end">
-                                    <div class="update-all-blogs-button me-2" id="update-post">
-                                        <button type="submit" onclick="allBlogUpdatePost(${post.id})" class="btn btn-success"><i class="bi bi-arrow-clockwise pe-1"></i>Update</button>
+                                <div class="post-items" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                    <div class="all-blogs-image" style="margin-bottom: 2em;"></div>
+                                    <div class="all-blogs-info px-3">
+                                        <p class="text-secondary fs-6">LIFESTYLE &nbsp;&nbsp;|&nbsp;&nbsp; JUNE 12, 2022</p>
                                     </div>
-                                    <div class="view-more-button me-2">
-                                        <button type="submit" onclick="viewMyPost(${post.id})" class="btn btn-secondary"><i class="bi bi-eye pe-1"></i>View</button>
+                                    <p class="text-secondary" class="post-id"></p>
+                                    <div class="all-blogs-title pb-2 px-3">
+                                        <p class="fs-3 post-title" id="all-blogs-post-title">${post.title}</p>
                                     </div>
-                                    <div class="delete-all-blogs-button" id="delete-post">
-                                        <button type="submit" onclick="allBlogDeletePost(${post.id})" class="btn btn-danger"><i class="bi bi-trash3 pe-1"></i>Delete</button>
+                                    <div class="all-blogs-body px-3">
+                                        <p class="text-secondary mb-5 post-message" id="all-blogs-post-body" style="font-size: 18px;">${post.body}</p>
+                                    </div>
+                                    <div class="all-blogs-post-buttons d-flex justify-content-end px-2 pb-3">
+                                        <div class="update-all-blogs-button me-2" id="update-post">
+                                            <button type="submit" onclick="allBlogUpdatePost(${post.id})" class="btn btn-success"><i class="bi bi-arrow-clockwise pe-1"></i>Update</button>
+                                        </div>
+                                        <div class="view-more-button me-2">
+                                            <button type="submit" onclick="viewMyPost(${post.id})" class="btn btn-secondary"><i class="bi bi-eye pe-1"></i>View</button>
+                                        </div>
+                                        <div class="delete-all-blogs-button" id="delete-post">
+                                            <button type="submit" onclick="allBlogDeletePost(${post.id})" class="btn btn-danger"><i class="bi bi-trash3 pe-1"></i>Delete</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>`
