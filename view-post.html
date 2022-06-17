@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/view-post.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <!-- aos lcdn ink -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>View Post</title>
+</head>
+<body>
+    <!-- view-post section -->
+    <section id="view-post-section" style="background-color: #e9aaaa;">
+        <div class="container">
+            <div class="row justify-content-center" style="padding-top: 120px;" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-8 mb-5">
+                    <div class="view-post" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background-color: #fff;">
+                        <div class="view-post-image" style="margin-bottom: 2em;"></div>
+                        <div class="view-post-info px-5">
+                            <p class="text-secondary fs-6">LIFESTYLE &nbsp;&nbsp;|&nbsp;&nbsp; JUNE 12, 2022</p>
+                        </div>
+                        <p class="text-secondary px-5" id="view-post-id"></p>
+                        <div class="view-post-title pb-2 px-5">
+                            <p class="display-6" id="view-post-title"></p>
+                        </div>
+                        <div class="view-post-body px-5">
+                            <p class="text-secondary mb-5" id="view-post-body" style="font-size: 18px;"></p>
+                        </div>
+                        <div class="view-post-button px-5 pb-3">
+                            <button type="submit" onclick="previousPage()" class="btn btn-primary"><i class="bi bi-box-arrow-left me-2"></i>Back</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- custom js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/view-post.js"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
