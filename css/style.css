@@ -9,22 +9,19 @@
 /*--- features-post section ----*/
 
 .features-image {
-    background: url("../img/features-post1-img.jpg") no-repeat;
+    background: url("../img/features-post1-img.jpg") no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
     height: 60vh;
 }
 
 #features-image2 {
-    background: url("../img/features-post2-img.jpg") no-repeat;
+    background: url("../img/features-post2-img.jpg") no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
 }
 
 #features-image3 {
-    background: url("../img/features-post3-img.jpg") no-repeat;
+    background: url("../img/features-post3-img.jpg") no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
 }
 
 /*--- recommended section ----*/
@@ -38,21 +35,18 @@
 .minimalism-image {
     background: url("../img/minimalism-img1.jpg") no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
     height: 60vh;
 }
 
 #minimalism-image2 {
-    background: url("../img/minimalism-img2.jpg") no-repeat;
+    background: url("../img/minimalism-img2.jpg") no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
 }
 
 /*--- minimalism section ----*/
 
 .all-blogs-image {
-    background: url("../img/all-blog-img1.jpg") no-repeat;
+    background: url("../img/all-blog-img1.jpg") no-repeat center;
     background-size: cover;
-    background-position: 50% 50%;
     height: 60vh;
 }
