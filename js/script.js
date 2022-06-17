@@ -1,5 +1,3 @@
-let createPostWrapper = document.querySelector("#create-post-wrapper");
-let createPost = document.querySelector("#create-post");
 let postId = document.querySelector("#post-id");
 let postTitle = document.querySelector("#post-title");
 let postBody = document.querySelector("#post-body");
@@ -225,10 +223,10 @@ function allBlogPostUI(arr) {
                                     </div>
                                     <p class="text-secondary" class="post-id"></p>
                                     <div class="all-blogs-title pb-2 px-3">
-                                        <p class="fs-3 post-title" id="all-blogs-post-title">${post.title}</p>
+                                        <p class="fs-3 post-title text-truncate" id="all-blogs-post-title">${post.title}</p>
                                     </div>
                                     <div class="all-blogs-body px-3">
-                                        <p class="text-secondary mb-5 post-message" id="all-blogs-post-body" style="font-size: 18px;">${post.body}</p>
+                                        <p class="text-secondary mb-5 post-message text-truncate" id="all-blogs-post-body" style="font-size: 18px;">${post.body}</p>
                                     </div>
                                     <div class="all-blogs-post-buttons d-flex justify-content-end px-2 pb-3">
                                         <div class="update-all-blogs-button me-2" id="update-post">
