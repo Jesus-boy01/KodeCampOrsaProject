@@ -1,9 +1,6 @@
-let postId = document.querySelector("#post-id");
 let postTitle = document.querySelector("#post-title");
 let postBody = document.querySelector("#post-body");
-let clearPost = document.querySelector(".clear-post");
 let createBox = [];
-
 let allBlogCreateBox = [];
 let updatePost = document.querySelector("#update-post");
 let allBlogPost = document.querySelector("#all-blog-posts");
@@ -108,28 +105,6 @@ function viewMyPost(id) {
     
 }
 
-function deleteMyPost(id) {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
-        method: 'DELETE',
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-        }
-    })
-    .then((response) => response.json())
-    .then(() => {
-        let confirmation = confirm('Delete Post Permanently?');
-
-        if (confirmation) {
-            createBox = createBox.filter(post => post.id !== id);
-        }
-
-        renderUI(createBox);
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-}
-
 function allBlogDeletePost(id) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
         method: 'DELETE',
@@ -150,35 +125,6 @@ function allBlogDeletePost(id) {
     .catch((err) => {
         console.log(err);
     })
-}
-
-function renderUI(arr) {
-
-    let featurePostHolder = '';
-
-    arr.forEach(post => {
-        featurePostHolder += `<div class="col-lg-4 mb-5" data-aos="fade-up" data-aos-delay="300">
-                                <div class="features-image" style="margin-bottom: 2em;"></div>
-                                    <div class="features-info">
-                                        <p class="text-secondary fs-6">LIFESTYLE &nbsp;&nbsp;|&nbsp;&nbsp; JUNE 12, 2022</p>
-                                    </div>
-                                    <p class="text-secondary">YOU</p>
-                                    <p class="text-secondary" class="post-id"></p>
-                                    <div class="features-title pb-2">
-                                        <p class="display-6 post-title" id="all-blogs-post-title">${post.title}</p>
-                                    </div>
-                                    <div class="features-body">
-                                        <p class="text-secondary mb-5 post-body" id="all-blogs-body" style="font-size: 18px;">${post.body}</p>
-                                    </div>
-                                    <div class="features-post-buttons d-flex justify-content-end">
-                                        <div class="delete-features-button" id="delete-post">
-                                            <button type="submit" onclick="deleteMyPost(${post.id})" class="btn btn-danger"><i class="bi bi-trash3 pe-1"></i>Delete</button>
-                                        </div>
-                                    </div>
-                                </div>`
-    });
-
-    createPostWrapper.innerHTML = featurePostHolder;
 }
 
 function allBlogPostUI(arr) {
