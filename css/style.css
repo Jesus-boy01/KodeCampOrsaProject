@@ -6,6 +6,10 @@
     font-family: 'PT Serif', serif;
 }
 
+.orsa-link:hover {
+    color: #000 !important;
+}
+
 /*--- features-post section ----*/
 
 .features-image {
@@ -24,11 +28,6 @@
     background-size: cover;
 }
 
-/*--- recommended section ----*/
-
-.recommended-link:hover {
-    color: #000 !important;
-}
 
 /*--- minimalism section ----*/
 

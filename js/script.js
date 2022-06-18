@@ -1,6 +1,5 @@
 let postTitle = document.querySelector("#post-title");
 let postBody = document.querySelector("#post-body");
-let createBox = [];
 let allBlogCreateBox = [];
 let updatePost = document.querySelector("#update-post");
 let allBlogPost = document.querySelector("#all-blog-posts");
