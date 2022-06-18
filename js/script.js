@@ -48,7 +48,7 @@ function allBlogCreatePost(e) {
         if (data.title !== "" && data.body !== "") {
             allBlogCreateBox.unshift(data);
         } else {
-            alert('Post title and body must be filled');
+            alert('Post title and body is required');
         }
 
         allBlogPostUI(allBlogCreateBox);
