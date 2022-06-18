@@ -30,37 +30,6 @@ function getAllBlogPosts() {
 
 getAllBlogPosts();
 
-createPost.addEventListener('submit', createFeaturePost);
-
-function createFeaturePost(e) {
-    e.preventDefault();
-
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: JSON.stringify({
-            title: postTitle.value,
-            body: postBody.value,
-            id: postId.value
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8'
-        }
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.title !== "" && data.body !== "") {
-                createBox.unshift(data);
-            } else {
-                alert('Post title and body must be filled');
-            }
-
-            renderUI(createBox);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-}
-
 allBlogCreate.addEventListener('submit', allBlogCreatePost);
 
 function allBlogCreatePost(e) {
@@ -79,6 +48,7 @@ function allBlogCreatePost(e) {
     })
     .then((response) => response.json())
     .then((data) => {
+        console.log(data);
         if (data.title !== "" && data.body !== "") {
             allBlogCreateBox.unshift(data);
         } else {
@@ -244,14 +214,6 @@ function allBlogPostUI(arr) {
     });
 
     allBlogPost.innerHTML = getPostHolder;
-}
-
-clearPost.addEventListener('submit', clearMyPost);
-
-function clearMyPost(e) {
-    e.preventDefault();
-
-    clearPost.reset();
 }
 
 allBlogsClearPost.addEventListener('submit', allBlogClearMyPost);
